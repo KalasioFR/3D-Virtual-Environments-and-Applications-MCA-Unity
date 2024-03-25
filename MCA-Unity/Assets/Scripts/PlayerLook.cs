@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using System.Collections.Generic;   
 using UnityEngine;
 
 public class PlayerLook : MonoBehaviour
@@ -8,6 +8,11 @@ public class PlayerLook : MonoBehaviour
     private float xRotation = 0f;
     public float xSensivity = 30f;
     public float ySensivity = 30f;
+
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
     
     public void ProcessLook(Vector2 input)
     {
@@ -15,7 +20,7 @@ public class PlayerLook : MonoBehaviour
         float mouseY = input.y;
 
         xRotation -= (mouseY * Time.deltaTime) * ySensivity;
-        xRotation = Mathf.Clamp(xRotation, -80, 80f);
+        xRotation = Mathf.Clamp(xRotation, -90, 90f);
 
         cam.transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
         transform.Rotate(Vector3.up * (mouseX * Time.deltaTime) * xSensivity);
