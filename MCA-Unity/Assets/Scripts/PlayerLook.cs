@@ -1,13 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;   
-using UnityEngine;
+ using UnityEngine;
 
 public class PlayerLook : MonoBehaviour
 {
     public Camera cam;
     private float xRotation = 0f;
-    public float xSensivity = 30f;
-    public float ySensivity = 30f;
+    public float xSensivity = 20f;
+    public float ySensivity = 20f;
 
     void Start()
     {
