@@ -1143,10 +1143,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20bd47ec0f1d1614eb1ae8b9ec9206d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textColor: {r: 0, g: 0, b: 0, a: 1}
+  textColor: {r: 1, g: 0, b: 0, a: 1}
   fontSize: 12
   updatePeriod: 0.5
-  lowFpsThreshold: 60
 --- !u!4 &1205323937
 Transform:
   m_ObjectHideFlags: 0
